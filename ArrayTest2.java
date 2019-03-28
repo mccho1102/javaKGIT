@@ -1,18 +1,25 @@
-package array;
 
 public class ArrayTest2 {
 
 	public static void main(String[] args) {
-		int[] num = new int[5]; // 0~4까지의 index
-		//이 배열의 이름은 num!!
-		num[0] = 1;
-		num[2] = 3;
-		num[4] = 5;
+		int[][] seat = new int[2][5];
 		
-		System.out.println(num.length); //배열의 개수
-		for (int i = 0; i < num.length; i++) {
-			System.out.println(i + "인덱스값 : " + num[i]);
-		}
-	}
+		System.out.println(seat.length);
+		System.out.println(seat[0].length);
+		
 
+		System.out.println("-------------------");
+		
+		//i = 행(2번) 
+		for (int i = 0; i < seat.length; i++) {
+			for (int j = 0; j < seat[i].length; j++) {
+			System.out.print(seat[i][j]);
+		 	}
+			System.out.println();
+		}
+//		System.out.print(seat[i] + "  ");
+//		System.out.println(seat[0][0]);
+//		System.out.println(seat[1][4]);
+		
+	}
 }

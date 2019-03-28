@@ -1,21 +1,18 @@
-package java5;
-
-import javax.swing.JOptionPane;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayTest6 {
 
 	public static void main(String[] args) {
-		String[] names = new String[3];
-		
-		for (int i = 0; i < names.length; i++) {
-			names[i] = JOptionPane.showInputDialog("이름 입력");
-		}
-		
-		for (int i = 0; i < names.length; i++) {
-			System.out.println(names[i]);
-			if(names[i].equals("박아무개")) {
-			System.out.println("박아무개가 있어요.");
-			System.out.println(i + 1 + "번째 있어요.");
+		//1. 배열
+		int[] num = {44, 77, 22, 33, 55, 66};
+		Arrays.sort(num);
+		//2. for
+		for (int i = 0; i < num.length; i++) {
+			//3. if
+			if(num[i] == 99) {
+				//4. print
+				System.out.println(i + 1 + "등");
 			}
 		}
 	}

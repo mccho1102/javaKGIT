@@ -1,28 +1,23 @@
-package array;
-
-import java.util.Scanner;
 
 public class ArrayTest5 {
 
 	public static void main(String[] args) {
-			Scanner sc = new Scanner(System.in);
-			
-			
-			String[] name = new String[3];
-			int[] num = new int[3];
-			
-			for (int i = 0; i < 3; i++) {
-				System.out.print("영어점수를 입력하세요 :");
-				name[i] = sc.next();
-			
-				System.out.print("수학점수를 입력하세요 :");
-				num[i] = sc.nextInt();
+//		1) 숫자를 배열에 넣는다.
+		int[] num = {33, 5, 77, 88, 12, 44};
+		int min = num[0];
+		
+//	    2) 반복문으로 순회한다
+		for (int i = 0; i < num.length; i++) {
+
+//		3) 조건문으로 최소값인지 확인해서
+//		더 작으면 최소값을 저장하는 변수에 옮겨준다.
+			if(num[i] < min) 
+			{
+				min = num[i];
 			}
-			for (int i = 0; i < num.length; i++) {
-				System.out.println(name[i] + ":" + num[i]);
-			}
-			int sum = num[0] + num[1] + num[2];
-			System.out.println("영어점수 평균은 : "+ sum/3.0);	
-			// 다시 하자 ㅜㅜ
+		}//for
+//		4) 최종적으로 최소값을 저장하는 변수에는 최소값이 저장되어
+//		있을 것이다.
+		System.out.println("제일 작은 숫자는 " + min);
 	}
-	}
+}
